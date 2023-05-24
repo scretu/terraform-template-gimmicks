@@ -1,7 +1,7 @@
 locals {
   template_variables = {
     git_tag       = "some_hash"
-    hostname      = "A.foo.bar"
+    hostname      = "E.foo.bar"
     optional_vars = {}
   }
 }
