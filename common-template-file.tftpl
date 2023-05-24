@@ -1,0 +1,10 @@
+global:
+  hostnames: [${hostname}]
+  importantStuff:
+    enableThis: ${enable_this}
+thisWorksIfVariableIsDeclared:
+  thisDependsOnTheValueOfVariable: %{ if enable_this == false }0%{ else }1%{ endif }
+thisWorksEvenIfVariableIsMissing:
+  VarOne: ${try(optional_vars.var_one, 2)}
+  VarTwo: ${try(optional_vars.var_two, "bla")}
+  VarThree: ${try(optional_vars.var_three, true)}
